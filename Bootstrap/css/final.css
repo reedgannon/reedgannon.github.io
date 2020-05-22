@@ -1,12 +1,26 @@
+h1,a{
+  font-family: 'Fugaz One', cursive;
+  color: #3F6678;
+}
+
+h2,p,h6{
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #3F6678;
+}
+
+.container-fluid,body{
+  background-color: #BDE8FD;
+}
+
 .topnav {
-  background-color: #D3E4FA;
+  background-color: #3F6678;
   overflow: hidden;
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: #333;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -14,18 +28,18 @@
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #BDE8FD;
+  color: #3F6678;
 }
 
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: #3F6678;
   color: white;
 }
 
-.topnav a.active {
-  background-color: #5382BB;
-  color: white;
+.topnav a.active:hover {
+  background-color: #BDE8FD;
+  color: #3F6678;
 }
 
 @media screen and (max-width: 600px) {
@@ -63,4 +77,32 @@
 
 .container{
   text-align: center;
+}
+
+footer{
+      width: 100%;
+      height: 100px;
+      background-image: url('https://res.cloudinary.com/dq2sec0lx/image/upload/v1590166485/photo-1508615039623-a25605d2b022_ztit60.jpg');
+      background-size: 400% 400%;
+      text-align: center;
+  }​
+
+.ml6 {
+  position: relative;
+  font-weight: 900;
+  font-size: 3.3em;
+}
+
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
 }
