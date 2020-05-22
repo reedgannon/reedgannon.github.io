@@ -22,12 +22,12 @@ $(document).ready(function(){
 
 
 
-mapboxgl.accessToken = 'pk.eyJ1IjoicmVlZGdhbm5vbiIsImEiOiJja2FpZGEyc3YwYngyMndwYzN4ejFqNGMyIn0.ZeU0LataXoFh5s2DkpyzsA';
+mapboxgl.accessToken = 'pk.eyJ1IjoicmVlZGdhbm5vbiIsImEiOiJja2FpY3U3ZHIwMHZ1MndvY2wya3BxNGEyIn0.EAWlJRLMiDYE83-xwFRXVg';
 var map = new mapboxgl.Map({
     container: 'map',
     center: [40.794, -74.470],
     zoom: 12.89,
-    style: 'mapbox://styles/jmezavin/ck4063g7e121s1cprqardiu2j'
+    style: 'mapbox://styles/mapbox/satellite-streets-v11'
     });
 
 var markerLoui = new mapboxgl.Marker();
@@ -59,3 +59,20 @@ map.on('click',function(e){
     console.log("the latitude of where the user's clicking is at " + e.lngLat.lat);
     console.log(e);
 });
+
+var textWrapper = document.querySelector('.ml6 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml6 .letter',
+    translateY: ["1.1em", 0],
+    translateZ: 0,
+    duration: 750,
+    delay: (el, i) => 50 * i
+  }).add({
+    targets: '.ml6',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
